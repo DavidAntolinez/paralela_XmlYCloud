@@ -39,7 +39,15 @@ export const putItem = (
     descripcion,
   });
 
-// ── Historial ─────────────────────────────────────────────────────────────────
+// ── Informe XML ───────────────────────────────────────────────────────────────
+
+export const getInforme = (token: string) =>
+  api.post<string>("/informe/", { token }, { responseType: "text" });
+
+export const descargarInforme = (token: string) =>
+  api.post("/informe/descargar", { token }, { responseType: "blob" });
+
+// ── Historial ───────────────────────────────────────────────────────────────
 
 export const getHistorial = (token: string) =>
   api.post<HistorialTransferencia[]>("/historial/", { token });

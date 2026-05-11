@@ -26,6 +26,9 @@ export default function NavBar({ token, setToken }: Props) {
           <Link to={`/historial/${token}`}>Historial</Link>
         </li>
         <li className="navbar-item">
+          <Link to={`/informe/${token}`}>Informe</Link>
+        </li>
+        <li className="navbar-item">
           <button className="logout-btn" onClick={handleLogOut}>
             Salir
           </button>

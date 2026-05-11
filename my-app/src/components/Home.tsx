@@ -6,6 +6,7 @@ import ListHistorialContainer from "./Historial/ListHistorialContainer";
 import Transferencia from "./Historial/Transferencia";
 import NewItem from "./Items/NewItem";
 import NewAlmacen from "./Almacen/NewAlmacen";
+import InformePage from "./Informe/InformePage";
 
 interface Props {
   token: string;
@@ -24,6 +25,7 @@ export default function Home({ token, setToken }: Props) {
         <Route path="/historial/:almacenId/:token/:id" element={<Transferencia />} />
         <Route path="/newitem/:almcId/:token" element={<NewItem />} />
         <Route path="/newalmacen/:token" element={<NewAlmacen />} />
+        <Route path="/informe/:token" element={<InformePage />} />
       </Routes>
     </>
   );
