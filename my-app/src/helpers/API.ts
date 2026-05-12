@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { Almacen, HistorialTransferencia, Item, LoginResponse } from "../types";
 
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "/api";
 
 const api = axios.create({ baseURL: BASE_URL });
 
